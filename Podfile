@@ -14,6 +14,7 @@ pod 'Kingfisher'
 pod 'MJRefresh'
 pod 'Reusable'
 pod 'TMTumblrSDK'
+pod 'OAuthSwift', '~> 1.2.0'
 
 end
 

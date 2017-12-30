@@ -9,6 +9,7 @@
 import UIKit
 import TMTumblrSDK.TMURLSession
 import TMTumblrSDK.TMOAuthAuthenticator
+import OAuthSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,11 +18,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var authenticator: TMOAuthAuthenticator!
     var session: TMURLSession!
     var applicationCredentials: TMAPIApplicationCredentials!
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    var oauthswift: OAuth2Swift!
+    
+    func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         registTumblrSDK()
         
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = ViewController(
+            session: session,
+            authenticator: authenticator)
+        
+        self.window?.makeKeyAndVisible()
+        
+        return true
+    }
+    
+    func application(
+        _ app: UIApplication,
+        open url: URL,
+        options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        authenticator.handleOpen(url)
         return true
     }
 
@@ -31,8 +52,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate {
     private func registTumblrSDK() {
         applicationCredentials = TMAPIApplicationCredentials(
-            consumerKey: Const.tumblrCustomKey.rawValue,
-            consumerSecret: Const.tumblrSecretKey.rawValue)
+            consumerKey: Const.Tumblr.customKey.rawValue,
+            consumerSecret: Const.Tumblr.secretKey.rawValue)
         
         session = TMURLSession(
             configuration: URLSessionConfiguration.default,

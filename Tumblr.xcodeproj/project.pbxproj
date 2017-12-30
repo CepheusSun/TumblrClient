@@ -13,6 +13,7 @@
 		33A2D9831FF7CEC7008FC7EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A2D9821FF7CEC7008FC7EB /* Assets.xcassets */; };
 		33A2D9861FF7CEC7008FC7EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A2D9841FF7CEC7008FC7EB /* LaunchScreen.storyboard */; };
 		33A2D9931FF7D3D5008FC7EB /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D9921FF7D3D5008FC7EB /* Const.swift */; };
+		33A2D9971FF7DB54008FC7EB /* HTTPEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D9961FF7DB54008FC7EB /* HTTPEngine.swift */; };
 		5F332B51E34B5B050FCFB06D /* Pods_Tumblr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13225576EB41A8B3B7A3FA2C /* Pods_Tumblr.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		33A2D9871FF7CEC7008FC7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33A2D98E1FF7D09A008FC7EB /* Tumblr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tumblr-Bridging-Header.h"; sourceTree = "<group>"; };
 		33A2D9921FF7D3D5008FC7EB /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		33A2D9961FF7DB54008FC7EB /* HTTPEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEngine.swift; sourceTree = "<group>"; };
 		39A46BA107F3EEA830B363C4 /* Pods-Tumblr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tumblr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tumblr/Pods-Tumblr.debug.xcconfig"; sourceTree = "<group>"; };
 		3B8FF3012C229130558B168F /* Pods-Tumblr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tumblr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tumblr/Pods-Tumblr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 		33A2D97A1FF7CEC7008FC7EB /* Tumblr */ = {
 			isa = PBXGroup;
 			children = (
+				33A2D9941FF7DB17008FC7EB /* General */,
 				33A2D97B1FF7CEC7008FC7EB /* AppDelegate.swift */,
 				33A2D97D1FF7CEC7008FC7EB /* ViewController.swift */,
 				33A2D97F1FF7CEC7008FC7EB /* Main.storyboard */,
@@ -82,6 +85,22 @@
 				33A2D9921FF7D3D5008FC7EB /* Const.swift */,
 			);
 			path = Tumblr;
+			sourceTree = "<group>";
+		};
+		33A2D9941FF7DB17008FC7EB /* General */ = {
+			isa = PBXGroup;
+			children = (
+				33A2D9951FF7DB25008FC7EB /* HTTP */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		33A2D9951FF7DB25008FC7EB /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				33A2D9961FF7DB54008FC7EB /* HTTPEngine.swift */,
+			);
+			path = HTTP;
 			sourceTree = "<group>";
 		};
 		5292CC33294DA437963DCDAB /* Pods */ = {
@@ -190,6 +209,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/OAuthSwift/OAuthSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -202,6 +222,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OAuthSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -240,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33A2D97E1FF7CEC7008FC7EB /* ViewController.swift in Sources */,
+				33A2D9971FF7DB54008FC7EB /* HTTPEngine.swift in Sources */,
 				33A2D97C1FF7CEC7008FC7EB /* AppDelegate.swift in Sources */,
 				33A2D9931FF7D3D5008FC7EB /* Const.swift in Sources */,
 			);
