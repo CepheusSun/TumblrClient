@@ -8,7 +8,6 @@
 
 import UIKit
 import TMTumblrSDK.TMAPIClient
-import OAuthSwift
 
 class ViewController: UIViewController {
 
@@ -81,7 +80,7 @@ class ViewController: UIViewController {
             DispatchQueue.main.async {
                 switch error {
                 case .none:
-                    self.authResultsTextView.text = "success"
+                    self.authResultsTextView.text = creds?.token
                 case .some(let error):
                     self.authResultsTextView.text = "Error:" + error.localizedDescription
                 }
