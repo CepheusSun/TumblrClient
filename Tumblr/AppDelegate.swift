@@ -76,7 +76,9 @@ extension AppDelegate {
 extension AppDelegate: TMOAuthAuthenticatorDelegate {
     
     func openURL(inBrowser url: URL!) {
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        DispatchQueue.main.async {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
     }
 }
 

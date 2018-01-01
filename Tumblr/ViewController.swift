@@ -8,6 +8,7 @@
 
 import UIKit
 import TMTumblrSDK.TMAPIClient
+import OAuthSwift
 
 class ViewController: UIViewController {
 
@@ -16,7 +17,7 @@ class ViewController: UIViewController {
     
     lazy var authButton: UIButton = {
         let button = UIButton(type: .custom)
-        button.frame = CGRect.init(x: 25, y: 50, width: 175, height: 30)
+        button.frame = CGRect(x: 25, y: 50, width: 175, height: 30)
         button.backgroundColor = UIColor.blue
         button.layer.cornerRadius = 10
         button.titleLabel?.textColor = UIColor.white
@@ -35,12 +36,12 @@ class ViewController: UIViewController {
     
     var unauthedRequestButton: UIButton = {
         let button = UIButton(type: .custom)
-        button.frame = CGRect.init(x: 25, y: 300, width: 225, height: 30)
+        button.frame = CGRect(x: 25, y: 300, width: 225, height: 30)
         button.backgroundColor = UIColor.green
         button.layer.cornerRadius = 10
         button.titleLabel?.textColor = UIColor.black
         button.setTitle("Send Unauthed Request", for: .normal)
-        button.addTarget(self, action: #selector(authenticate), for: .touchUpInside)
+        button.addTarget(self, action: #selector(blogInfo), for: .touchUpInside)
         return button
     }()
     
@@ -74,12 +75,13 @@ class ViewController: UIViewController {
     }
 
     @objc func authenticate() {
-        authenticator.authenticate("ello") { (creds, error) in
-            
+        
+        authenticator.authenticate("Tumblr-sunny") { (creds, error) in
+
             DispatchQueue.main.async {
                 switch error {
                 case .none:
-                    self.authResultsTextView.text = "Error:"
+                    self.authResultsTextView.text = "success"
                 case .some(let error):
                     self.authResultsTextView.text = "Error:" + error.localizedDescription
                 }
@@ -89,8 +91,20 @@ class ViewController: UIViewController {
     
     @objc func blogInfo() {
         
+        let requestFactory = TMRequestFactory(baseURLDeterminer: TMBasicBaseURLDeterminer())
+        let client = TMAPIClient(session: session, requestFactory: requestFactory)
+        blogTheInfo( client, requestFactory: requestFactory)
+        
     }
 
+    
+    func blogTheInfo(_ client: TMAPIClient, requestFactory: TMRequestFactory) {
+        
+        _ = client.blogInfoDataTask(forBlogName: "ios", callback: { (json, error) in
+            
+        }).resume()
+        
+    }
 
 }
 
