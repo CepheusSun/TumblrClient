@@ -14,9 +14,14 @@ import TMTumblrSDK.TMAPIClient
 
 final class LikeViewModel {
     
-    func load() {
-        HTTPClient.likesDataTask(withParameters: ["limit":1, "offset": 0]) { (res, error) in
-            print(res)
+    var list: [Post] = []
+    
+    func load(_ callback: @escaping () -> Void){
+        HTTPClient.likesDataTask(withParameters: ["limit":1, "offset": 1]) {[weak self] (res, error) in
+            
+            let resObj = try? Mappable.mapResponseToArray(res!, to: Post.self, with: "liked_posts")
+            self?.list = resObj!
+            callback()
         }.resume()
     }
 }

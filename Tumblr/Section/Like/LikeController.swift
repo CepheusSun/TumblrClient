@@ -16,25 +16,34 @@ class LikeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         navigationItem.title = "喜欢"
-
-        viewModel.load()
+        navigationItem.title = "喜欢"
+        tableView.register(cellType: VideoCell.self)
+        tableView.tableFooterView = UIView()
+        viewModel.load { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+extension LikeController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.list.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: VideoCell.self)
+        cell.model = viewModel.list[indexPath.row]
+        return cell
     }
-    */
+    
+}
 
+extension LikeController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let post = viewModel.list[indexPath.row]
+        
+        return CGFloat(30 + 16 + ScreenWidth() * post.thumbnail_height / post.thumbnail_width)
+    }
 }

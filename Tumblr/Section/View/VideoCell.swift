@@ -7,18 +7,19 @@
 //
 
 import UIKit
+import Reusable
 
-class VideoCell: UITableViewCell {
+class VideoCell: UITableViewCell, NibReusable {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBOutlet weak var avatorImageView: UIImageView!
+    @IBOutlet weak var autherNickNameLabel: UILabel!
+    @IBOutlet weak var authorUserNameLabel: UILabel!
+    @IBOutlet weak var videoImageView: UIImageView!
+    
+    var model: Post! {
+        didSet {
+            videoImageView.setImage(URL(string: model.thumbnail_url))
+        }
     }
     
 }

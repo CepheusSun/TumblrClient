@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct Post: Codable {
+    
+    var thumbnail_height: Float  // 缩略图高
+    var thumbnail_width: Float   // 缩略图宽
+    var thumbnail_url: String    // 缩略图
+}

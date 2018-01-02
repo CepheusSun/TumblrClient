@@ -42,9 +42,9 @@ enum InterfaceProvider {
             selectedImage: UIImage(named: "me_1"))
         
         tabbarController.viewControllers = [
-            UINavigationController(rootViewController: v1),
-            UINavigationController(rootViewController: v2),
-            UINavigationController(rootViewController: v3)
+            NavigationController(rootViewController: v1),
+            NavigationController(rootViewController: v2),
+            NavigationController(rootViewController: v3)
         ]
         
         return tabbarController
@@ -69,9 +69,9 @@ class TabbarBasicContentView: ESTabBarItemContentView {
         imageView.transform = transform.scaledBy(x: 1.15, y: 1.15)
         
         iconColor = UIColor(white: 165.0 / 255.0, alpha: 1.0)
-        highlightIconColor = UIColor(white: 255.0 / 255.0, alpha: 1.0)
-        backdropColor = UIColor(red: 37/255.0, green: 39/255.0, blue: 42/255.0, alpha: 1.0)
-        highlightBackdropColor = UIColor(red: 22/255.0, green: 24/255.0, blue: 25/255.0, alpha: 1.0)
+        highlightIconColor = UIColor.white
+        backdropColor = UIColor.colorWithRGB(54, g: 70, b: 93)
+        highlightBackdropColor = backdropColor
     }
     
     override func highlightAnimation(animated: Bool, completion: (() -> ())?) {
