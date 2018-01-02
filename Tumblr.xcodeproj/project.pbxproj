@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		33A2D97C1FF7CEC7008FC7EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D97B1FF7CEC7008FC7EB /* AppDelegate.swift */; };
-		33A2D97E1FF7CEC7008FC7EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D97D1FF7CEC7008FC7EB /* ViewController.swift */; };
-		33A2D9811FF7CEC7008FC7EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A2D97F1FF7CEC7008FC7EB /* Main.storyboard */; };
 		33A2D9831FF7CEC7008FC7EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33A2D9821FF7CEC7008FC7EB /* Assets.xcassets */; };
 		33A2D9861FF7CEC7008FC7EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33A2D9841FF7CEC7008FC7EB /* LaunchScreen.storyboard */; };
 		33A2D9931FF7D3D5008FC7EB /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D9921FF7D3D5008FC7EB /* Const.swift */; };
 		33A2D9971FF7DB54008FC7EB /* HTTPEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D9961FF7DB54008FC7EB /* HTTPEngine.swift */; };
+		33A2D99C1FFB2C5A008FC7EB /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D99A1FFB2C5A008FC7EB /* OAuthViewController.swift */; };
+		33A2D99D1FFB2C5A008FC7EB /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A2D99B1FFB2C5A008FC7EB /* OAuthViewController.xib */; };
+		33A2D9A71FFB30AF008FC7EB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D9A51FFB30AF008FC7EB /* HomeController.swift */; };
+		33A2D9A81FFB30AF008FC7EB /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A2D9A61FFB30AF008FC7EB /* HomeController.xib */; };
+		33A2D9AB1FFB30BB008FC7EB /* LikeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D9A91FFB30BB008FC7EB /* LikeController.swift */; };
+		33A2D9AC1FFB30BB008FC7EB /* LikeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A2D9AA1FFB30BB008FC7EB /* LikeController.xib */; };
+		33A2D9AF1FFB30C6008FC7EB /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D9AD1FFB30C6008FC7EB /* PersonController.swift */; };
+		33A2D9B01FFB30C6008FC7EB /* PersonController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A2D9AE1FFB30C6008FC7EB /* PersonController.xib */; };
+		33A2D9B21FFB50F9008FC7EB /* InterfaceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D9B11FFB50F9008FC7EB /* InterfaceProvider.swift */; };
 		5F332B51E34B5B050FCFB06D /* Pods_Tumblr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13225576EB41A8B3B7A3FA2C /* Pods_Tumblr.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,14 +28,21 @@
 		13225576EB41A8B3B7A3FA2C /* Pods_Tumblr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tumblr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A2D9781FF7CEC7008FC7EB /* Tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33A2D97B1FF7CEC7008FC7EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		33A2D97D1FF7CEC7008FC7EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		33A2D9801FF7CEC7008FC7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33A2D9821FF7CEC7008FC7EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33A2D9851FF7CEC7008FC7EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33A2D9871FF7CEC7008FC7EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33A2D98E1FF7D09A008FC7EB /* Tumblr-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tumblr-Bridging-Header.h"; sourceTree = "<group>"; };
 		33A2D9921FF7D3D5008FC7EB /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		33A2D9961FF7DB54008FC7EB /* HTTPEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPEngine.swift; sourceTree = "<group>"; };
+		33A2D99A1FFB2C5A008FC7EB /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
+		33A2D99B1FFB2C5A008FC7EB /* OAuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
+		33A2D9A51FFB30AF008FC7EB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		33A2D9A61FFB30AF008FC7EB /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
+		33A2D9A91FFB30BB008FC7EB /* LikeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeController.swift; sourceTree = "<group>"; };
+		33A2D9AA1FFB30BB008FC7EB /* LikeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikeController.xib; sourceTree = "<group>"; };
+		33A2D9AD1FFB30C6008FC7EB /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
+		33A2D9AE1FFB30C6008FC7EB /* PersonController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonController.xib; sourceTree = "<group>"; };
+		33A2D9B11FFB50F9008FC7EB /* InterfaceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceProvider.swift; sourceTree = "<group>"; };
 		39A46BA107F3EEA830B363C4 /* Pods-Tumblr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tumblr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tumblr/Pods-Tumblr.debug.xcconfig"; sourceTree = "<group>"; };
 		3B8FF3012C229130558B168F /* Pods-Tumblr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tumblr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tumblr/Pods-Tumblr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,10 +88,9 @@
 		33A2D97A1FF7CEC7008FC7EB /* Tumblr */ = {
 			isa = PBXGroup;
 			children = (
+				33A2D9981FFB2C34008FC7EB /* Section */,
 				33A2D9941FF7DB17008FC7EB /* General */,
 				33A2D97B1FF7CEC7008FC7EB /* AppDelegate.swift */,
-				33A2D97D1FF7CEC7008FC7EB /* ViewController.swift */,
-				33A2D97F1FF7CEC7008FC7EB /* Main.storyboard */,
 				33A2D9821FF7CEC7008FC7EB /* Assets.xcassets */,
 				33A2D9841FF7CEC7008FC7EB /* LaunchScreen.storyboard */,
 				33A2D9871FF7CEC7008FC7EB /* Info.plist */,
@@ -101,6 +114,62 @@
 				33A2D9961FF7DB54008FC7EB /* HTTPEngine.swift */,
 			);
 			path = HTTP;
+			sourceTree = "<group>";
+		};
+		33A2D9981FFB2C34008FC7EB /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				33A2D9A41FFB308E008FC7EB /* Person */,
+				33A2D9A31FFB3066008FC7EB /* Like */,
+				33A2D9A21FFB305E008FC7EB /* Home */,
+				33A2D99E1FFB2F87008FC7EB /* Root */,
+				33A2D9991FFB2C3B008FC7EB /* OAuth */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		33A2D9991FFB2C3B008FC7EB /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				33A2D99A1FFB2C5A008FC7EB /* OAuthViewController.swift */,
+				33A2D99B1FFB2C5A008FC7EB /* OAuthViewController.xib */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		33A2D99E1FFB2F87008FC7EB /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				33A2D9B11FFB50F9008FC7EB /* InterfaceProvider.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		33A2D9A21FFB305E008FC7EB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				33A2D9A51FFB30AF008FC7EB /* HomeController.swift */,
+				33A2D9A61FFB30AF008FC7EB /* HomeController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		33A2D9A31FFB3066008FC7EB /* Like */ = {
+			isa = PBXGroup;
+			children = (
+				33A2D9A91FFB30BB008FC7EB /* LikeController.swift */,
+				33A2D9AA1FFB30BB008FC7EB /* LikeController.xib */,
+			);
+			path = Like;
+			sourceTree = "<group>";
+		};
+		33A2D9A41FFB308E008FC7EB /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				33A2D9AD1FFB30C6008FC7EB /* PersonController.swift */,
+				33A2D9AE1FFB30C6008FC7EB /* PersonController.xib */,
+			);
+			path = Person;
 			sourceTree = "<group>";
 		};
 		5292CC33294DA437963DCDAB /* Pods */ = {
@@ -175,9 +244,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33A2D9A81FFB30AF008FC7EB /* HomeController.xib in Resources */,
 				33A2D9861FF7CEC7008FC7EB /* LaunchScreen.storyboard in Resources */,
+				33A2D99D1FFB2C5A008FC7EB /* OAuthViewController.xib in Resources */,
 				33A2D9831FF7CEC7008FC7EB /* Assets.xcassets in Resources */,
-				33A2D9811FF7CEC7008FC7EB /* Main.storyboard in Resources */,
+				33A2D9B01FFB30C6008FC7EB /* PersonController.xib in Resources */,
+				33A2D9AC1FFB30BB008FC7EB /* LikeController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +279,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tumblr/Pods-Tumblr-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ESTabBarController-swift/ESTabBarController_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
@@ -219,6 +292,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ESTabBarController_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
@@ -258,9 +332,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33A2D97E1FF7CEC7008FC7EB /* ViewController.swift in Sources */,
+				33A2D9AB1FFB30BB008FC7EB /* LikeController.swift in Sources */,
+				33A2D99C1FFB2C5A008FC7EB /* OAuthViewController.swift in Sources */,
 				33A2D9971FF7DB54008FC7EB /* HTTPEngine.swift in Sources */,
+				33A2D9A71FFB30AF008FC7EB /* HomeController.swift in Sources */,
+				33A2D9AF1FFB30C6008FC7EB /* PersonController.swift in Sources */,
 				33A2D97C1FF7CEC7008FC7EB /* AppDelegate.swift in Sources */,
+				33A2D9B21FFB50F9008FC7EB /* InterfaceProvider.swift in Sources */,
 				33A2D9931FF7D3D5008FC7EB /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,14 +346,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		33A2D97F1FF7CEC7008FC7EB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				33A2D9801FF7CEC7008FC7EB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		33A2D9841FF7CEC7008FC7EB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

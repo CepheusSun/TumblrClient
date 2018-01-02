@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.5.1)
+  - ESTabBarController-swift (2.5)
   - Kingfisher (4.3.1)
   - MJRefresh (3.1.15.1)
   - Reusable (4.0.0):
@@ -16,6 +17,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - ESTabBarController-swift
   - Kingfisher
   - MJRefresh
   - Reusable
@@ -27,6 +29,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  ESTabBarController-swift: 8daa432f2a9be8ebd25101dc46c84472fd760512
   Kingfisher: 75541c4b62f02e1fde6f9772303de3d9ebe8f5b3
   MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
   Reusable: 98e5fff1e0e2e00872199699b276dde08ee56c07
@@ -36,6 +39,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   TMTumblrSDK: 75aca84910dd905a1ca63f5f5826fbeaf28a0c1e
 
-PODFILE CHECKSUM: 86ee8594f210cea53eb9ba356eac7d224eeb390a
+PODFILE CHECKSUM: 82780488dff1c02abe394edc7fb2a27bc107c610
 
 COCOAPODS: 1.4.0.beta.2

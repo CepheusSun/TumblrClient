@@ -9,7 +9,6 @@
 import UIKit
 import TMTumblrSDK.TMURLSession
 import TMTumblrSDK.TMOAuthAuthenticator
-import OAuthSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,20 +17,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var authenticator: TMOAuthAuthenticator!
     var session: TMURLSession!
     var applicationCredentials: TMAPIApplicationCredentials!
-    var oauthswift: OAuth2Swift!
     
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        registTumblrSDK()
-        
-        
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = ViewController(
-            session: session,
-            authenticator: authenticator)
-        
+        configRootViewController()
         self.window?.makeKeyAndVisible()
         
         return true
@@ -42,42 +34,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         open url: URL,
         options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         
-        authenticator.handleOpen(url)
+        HTTP.authenticator.handleOpen(url)
         return true
     }
+    
 
 }
 
 
 extension AppDelegate {
-    private func registTumblrSDK() {
-        applicationCredentials = TMAPIApplicationCredentials(
-            consumerKey: Const.Tumblr.customKey.rawValue,
-            consumerSecret: Const.Tumblr.secretKey.rawValue)
-        
-        session = TMURLSession(
-            configuration: URLSessionConfiguration.default,
-            applicationCredentials: applicationCredentials,
-            userCredentials: TMAPIUserCredentials(),
-            networkActivityManager: nil,
-            sessionTaskUpdateDelegate: nil,
-            sessionMetricsDelegate: nil,
-            requestTransformer: nil,
-            additionalHeaders: nil)
-        
-        authenticator =  TMOAuthAuthenticator(
-            session: session,
-            applicationCredentials: applicationCredentials,
-            delegate: self)
-        
-    }
-}
-
-extension AppDelegate: TMOAuthAuthenticatorDelegate {
-    
-    func openURL(inBrowser url: URL!) {
-        DispatchQueue.main.async {
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    func configRootViewController() {
+        if HTTP.isOAuth() {
+            // 获得授权, 进入界面
+            self.window?.rootViewController = InterfaceProvider.mainTabbar()
+        } else {
+            // 没有授权, 进入 OAuth 页面
+            self.window?.rootViewController = InterfaceProvider.OAuth()
+            
         }
     }
 }
