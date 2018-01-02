@@ -13,4 +13,6 @@ struct Post: Codable {
     var thumbnail_height: Float  // 缩略图高
     var thumbnail_width: Float   // 缩略图宽
     var thumbnail_url: String    // 缩略图
+    
+    var blog_name: String        // 博客名称
 }

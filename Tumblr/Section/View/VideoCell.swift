@@ -18,6 +18,9 @@ class VideoCell: UITableViewCell, NibReusable {
     
     var model: Post! {
         didSet {
+            autherNickNameLabel.text = model.blog_name
+            authorUserNameLabel.text = model.blog_name
+
             videoImageView.setImage(URL(string: model.thumbnail_url))
         }
     }

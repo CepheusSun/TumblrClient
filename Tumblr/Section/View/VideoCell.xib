@@ -27,13 +27,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUn-Js-VBO">
-                        <rect key="frame" x="46" y="8" width="39.5" height="19.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <rect key="frame" x="46" y="8" width="36" height="17"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iy1-5Q-QD5">
-                        <rect key="frame" x="46" y="22" width="33" height="16"/>
+                        <rect key="frame" x="46" y="25" width="33" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                     <constraint firstAttribute="bottom" secondItem="CQi-J9-PZ5" secondAttribute="bottom" id="TML-Ol-Ib6"/>
                     <constraint firstItem="VUn-Js-VBO" firstAttribute="leading" secondItem="6qU-Tb-Bcr" secondAttribute="trailing" constant="8" id="XuC-wF-A4S"/>
                     <constraint firstItem="CQi-J9-PZ5" firstAttribute="top" secondItem="6qU-Tb-Bcr" secondAttribute="bottom" constant="8" id="cXY-fX-z9T"/>
-                    <constraint firstItem="Iy1-5Q-QD5" firstAttribute="bottom" secondItem="6qU-Tb-Bcr" secondAttribute="bottom" id="nd5-kK-gtf"/>
+                    <constraint firstItem="Iy1-5Q-QD5" firstAttribute="bottom" secondItem="6qU-Tb-Bcr" secondAttribute="bottom" constant="3" id="nd5-kK-gtf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
