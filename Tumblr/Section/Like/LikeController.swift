@@ -12,7 +12,7 @@ class LikeController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "喜欢"
+         navigationItem.title = "喜欢"
 
         // Do any additional setup after loading the view.
     }

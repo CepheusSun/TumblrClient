@@ -12,7 +12,7 @@ class HomeController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.title = "首页"
+        navigationItem.title = "首页"
         
     }
 

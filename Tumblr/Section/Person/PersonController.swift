@@ -12,7 +12,7 @@ class PersonController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "个人"
+         navigationItem.title = "个人"
         
     }
 
