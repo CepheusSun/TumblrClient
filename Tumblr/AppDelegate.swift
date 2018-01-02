@@ -14,9 +14,6 @@ import TMTumblrSDK.TMOAuthAuthenticator
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var authenticator: TMOAuthAuthenticator!
-    var session: TMURLSession!
-    var applicationCredentials: TMAPIApplicationCredentials!
     
     func application(
         _ application: UIApplication,
@@ -49,8 +46,7 @@ extension AppDelegate {
             self.window?.rootViewController = InterfaceProvider.mainTabbar()
         } else {
             // 没有授权, 进入 OAuth 页面
-            self.window?.rootViewController = InterfaceProvider.OAuth()
-            
+            self.window?.rootViewController = InterfaceProvider.OAuth() 
         }
     }
 }

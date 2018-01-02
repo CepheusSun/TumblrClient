@@ -10,11 +10,15 @@ import UIKit
 
 class LikeController: UIViewController {
 
+    let viewModel = LikeViewModel()
+
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
          navigationItem.title = "喜欢"
 
-        // Do any additional setup after loading the view.
+        viewModel.load()
     }
 
     override func didReceiveMemoryWarning() {

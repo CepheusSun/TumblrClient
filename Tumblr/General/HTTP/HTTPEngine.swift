@@ -13,6 +13,7 @@ import TMTumblrSDK.TMOAuthAuthenticator
 
 
 let HTTP = HTTPEngine()
+let HTTPClient = HTTPEngine().client
 
 final class HTTPEngine: NSObject {
 
@@ -23,7 +24,29 @@ final class HTTPEngine: NSObject {
     }
     
     var authenticator: TMOAuthAuthenticator!
-    var session: TMURLSession!
+    private var session: TMURLSession!
+    
+    lazy var client: TMAPIClient = makeClient()
+    
+    private func makeClient() -> TMAPIClient {
+        if isOAuth() {
+            let token = UserDefaults.standard.string(forKey: TokenKey.token.rawValue)!
+            let secret = UserDefaults.standard.string(forKey: TokenKey.secret.rawValue)!
+            
+            self.session = TMURLSession(
+                configuration: URLSessionConfiguration.default,
+                applicationCredentials: TMAPIApplicationCredentials(
+                    consumerKey: Const.Tumblr.customKey.rawValue,
+                    consumerSecret: Const.Tumblr.secretKey.rawValue),
+                userCredentials: TMAPIUserCredentials(
+                    token: token,
+                    tokenSecret: secret)
+            )
+        }
+        let requestFactory = TMRequestFactory(baseURLDeterminer: TMBasicBaseURLDeterminer())
+        let client = TMAPIClient(session: session, requestFactory: requestFactory)
+        return client
+    }
     
     fileprivate override init() {
         super.init()
@@ -49,22 +72,14 @@ final class HTTPEngine: NSObject {
     
     // 这个方法用来验证 Oauth
     func authenticate() {
-        
-        let token = UserDefaults.standard.string(forKey: TokenKey.token.rawValue)
-        let secret = UserDefaults.standard.string(forKey: TokenKey.secret.rawValue)
-        
-        if let token = token, let secret = secret {
-            self.session = TMURLSession(
-                configuration: URLSessionConfiguration.default,
-                applicationCredentials: TMAPIApplicationCredentials(
-                    consumerKey: Const.Tumblr.customKey.rawValue,
-                    consumerSecret: Const.Tumblr.secretKey.rawValue),
-                userCredentials: TMAPIUserCredentials(
-                    token: token,
-                    tokenSecret: secret)
-            )
+
+        if isOAuth() {
+            // 重新配置 client
+            self.client = makeClient()
             // 切换控制器
-            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = InterfaceProvider.mainTabbar()
+ 
         } else {
             authenticator.authenticate("Tumblr-sunny") { (creds, error) in
                 DispatchQueue.main.async {
@@ -90,11 +105,7 @@ final class HTTPEngine: NSObject {
         }
         return false
     }
-    
-    
-    
-    
-    
+
     
 }
 
