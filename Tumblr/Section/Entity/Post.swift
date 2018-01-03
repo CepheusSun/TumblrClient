@@ -10,9 +10,72 @@ import Foundation
 
 struct Post: Codable {
     
+    // 公共
+    var blog_name: String    // 博客名称
+    var `id`: Int // 博客 id
+    var post_url: String // 博客地址
+    var type: Type       // 博客种类
+    var timestamp: Int   // 博客发表时间
+    var date: String     // 博客发表时间
+    var format: Format   // 博客发表的格式
+    var reblog_key: String // 转发博客需要的 key
+    var tags: [String]     // 博客标签
+    var bookmarklet: Bool?  // 博客是否通过 Tumblr 的 bookmarket 发表
+    var mobile: Bool?      // 博客是否是通过手机发表
+    var source_url: String? // 博客文章的地址
+    var source_title: String? // The title of the source site
+    var liked: Bool? // 是否已喜欢
+    var state: State // 博客状态
+//    var total_posts: Int // The total number of post available for this request, useful for paginating through results
+    
+    
+    // 文字博客
+    var title: String?  // 博客的可选 title
+    var body: String?   // 博客的内容
+    
+    // 图片
+    var photos: [Photo]?
+    var caption: String? // The user-supplied caption
+    
+    // 
+
+    
+    
     var thumbnail_height: Float  // 缩略图高
     var thumbnail_width: Float   // 缩略图宽
     var thumbnail_url: String    // 缩略图
     
-    var blog_name: String        // 博客名称
+    
+    enum `Type`: String, Codable {
+        case text = "text"
+        case video = "video"
+        case photo = "photo"
+    }
+    
+    enum Format: String, Codable {
+        case html = "html"
+        case markdown = "markdown"
+    }
+    
+    enum State: String, Codable {
+        case published = "published" // 发布
+        case queued = "queued"        // 排队
+        case draft = "draft"            // 草稿
+        case `private` = "private"      // 私有
+
+    }
+    
+    
+    struct Photo: Codable {
+        var caption: String  //  user supplied caption for the individual photo
+        var alt_sizes: [Size]
+        
+        struct Size: Codable {
+            var width: Float
+            var height: Float
+            var url: String
+        }
+        
+    }
+    
 }
