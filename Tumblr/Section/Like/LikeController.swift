@@ -19,8 +19,13 @@ class LikeController: UIViewController {
         navigationItem.title = "喜欢"
         tableView.register(cellType: VideoCell.self)
         tableView.register(cellType: PhotoSetCell.self)
-        tableView.separatorStyle = .none
-        tableView.tableFooterView = UIView()
+        
+        tableView.sunny.config {
+            $0.separatorStyle = .none
+            $0.tableFooterView = UIView()
+            $0.backgroundColor = Const.Color.blue
+            $0.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 1))
+        }
         viewModel.load { [weak self] in
             self?.tableView.reloadData()
         }
