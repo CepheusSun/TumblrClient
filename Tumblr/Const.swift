@@ -6,7 +6,7 @@
 //  Copyright © 2017年 CepheusSun. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 enum Const {
     
@@ -15,4 +15,12 @@ enum Const {
         case secretKey = "OoMVmje98eNF64uts82FpoPA4TeqdF2737Qg7reE2t8nE4aXKH"
     }
     
+    
+    struct `Color` {
+        static let blue = UIColor.colorWithRGB(54, g: 70, b: 93)
+
+    }
+    
 }
+
+

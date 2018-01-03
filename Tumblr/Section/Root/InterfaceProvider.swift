@@ -70,7 +70,7 @@ class TabbarBasicContentView: ESTabBarItemContentView {
         
         iconColor = UIColor(white: 165.0 / 255.0, alpha: 1.0)
         highlightIconColor = UIColor.white
-        backdropColor = UIColor.colorWithRGB(54, g: 70, b: 93)
+        backdropColor = Const.Color.blue
         highlightBackdropColor = backdropColor
     }
     

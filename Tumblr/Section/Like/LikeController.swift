@@ -19,6 +19,7 @@ class LikeController: UIViewController {
         navigationItem.title = "喜欢"
         tableView.register(cellType: VideoCell.self)
         tableView.register(cellType: PhotoSetCell.self)
+        tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
         viewModel.load { [weak self] in
             self?.tableView.reloadData()
@@ -54,6 +55,15 @@ extension LikeController: UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return UIView().sunny.config({
+            $0.backgroundColor = Const.Color.blue
+        })
+    }
 }
 
 extension LikeController: UITableViewDelegate {
