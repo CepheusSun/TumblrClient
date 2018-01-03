@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Post: Codable {
     
@@ -71,11 +72,45 @@ struct Post: Codable {
         var original_size: Size
 
         struct Size: Codable {
-            var width: Float
-            var height: Float
+            var width: CGFloat
+            var height: CGFloat
             var url: String
         }
         
+    }
+
+    func imageSizeFor(index: Int) -> CGSize {
+        var res = CGSize.zero
+        photoset_layout.ifNone {
+            
+            let height = (photos?.first?.alt_sizes.first?.height).or(30)
+            let width = (photos?.first?.alt_sizes.first?.width).or(30)
+            let resHeight = ScreenWidth() * height / width
+            
+            res = CGSize(
+                width: resHeight * height / width,
+                height: resHeight)
+        }
+        
+        return res
+    }
+
+    func cellHeight() -> CGFloat {
+        
+        switch type {
+        case .photo:
+            var res = CGFloat(30 + 100)
+            photoset_layout.ifNone {
+                let height = (photos?.first?.alt_sizes.first?.height).or(30)
+                let width = (photos?.first?.alt_sizes.first?.width).or(30)
+                res = ScreenWidth() * height / width + 30
+            }
+            return res
+        case .video:
+            return CGFloat(30 + 16 + ScreenWidth() * thumbnail_height.or(0) / thumbnail_width.or(1))
+        case .text:
+            return CGFloat(30 + 16 + ScreenWidth() * thumbnail_height.or(0) / thumbnail_width.or(1))
+        } 
     }
     
 }

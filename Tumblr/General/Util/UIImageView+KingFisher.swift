@@ -51,7 +51,7 @@ public extension UIImageView {
                          placeholder: placeholderImage,
                          options: options,
                          progressBlock: nil) {[weak self] (image, error, cacheType, imageURL) in
-                            self?.contentMode = .scaleToFill
+                            self?.contentMode = .scaleAspectFit
         }
     }
 }

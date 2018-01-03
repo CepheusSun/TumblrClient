@@ -29,11 +29,15 @@ class LikeController: UIViewController {
 
 extension LikeController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = viewModel.list[indexPath.row]
+        let model = viewModel.list[indexPath.section]
         switch model.type {
         case .photo:
             let cell = tableView.dequeueReusableCell(for: indexPath, cellType: PhotoSetCell.self)
@@ -55,16 +59,7 @@ extension LikeController: UITableViewDataSource {
 extension LikeController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let model = viewModel.list[indexPath.row]
-        
-        switch model.type {
-        case .photo:
-            return CGFloat(30 + 100)
-        case .video:
-            return CGFloat(30 + 16 + ScreenWidth() * model.thumbnail_height.or(0) / model.thumbnail_width.or(1))
-        case .text:
-            return CGFloat(30 + 16 + ScreenWidth() * model.thumbnail_height.or(0) / model.thumbnail_width.or(1))
-        }
-        
+        let model = viewModel.list[indexPath.section]
+        return model.cellHeight()
     }
 }

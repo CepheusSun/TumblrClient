@@ -59,8 +59,6 @@ extension PhotoSetCell: UICollectionViewDataSource {
 extension PhotoSetCell: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-
-        return CGSize(width: 100, height: 100)
+        return model.imageSizeFor(index: indexPath.row)
     }
 }

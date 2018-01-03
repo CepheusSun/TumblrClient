@@ -15,7 +15,7 @@ class SinglePhotoCell: UICollectionViewCell, NibReusable {
     
     var model: Post.Photo! {
         didSet {
-            mainImageView.setImage(URL(string: model.original_size.url))
+            mainImageView.setImage(URL(string: model.alt_sizes[2].url))
         }
     }
 
