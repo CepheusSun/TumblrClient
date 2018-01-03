@@ -18,6 +18,7 @@ class LikeController: UIViewController {
         super.viewDidLoad()
         navigationItem.title = "喜欢"
         tableView.register(cellType: VideoCell.self)
+        tableView.register(cellType: PhotoSetCell.self)
         tableView.tableFooterView = UIView()
         viewModel.load { [weak self] in
             self?.tableView.reloadData()
@@ -32,9 +33,21 @@ extension LikeController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: VideoCell.self)
-        cell.model = viewModel.list[indexPath.row]
-        return cell
+        let model = viewModel.list[indexPath.row]
+        switch model.type {
+        case .photo:
+            let cell = tableView.dequeueReusableCell(for: indexPath, cellType: PhotoSetCell.self)
+            cell.model = model
+            return cell
+        case .video:
+            let cell = tableView.dequeueReusableCell(for: indexPath, cellType: VideoCell.self)
+            cell.model = model
+            return cell
+        case .text:
+            let cell = tableView.dequeueReusableCell(for: indexPath, cellType: VideoCell.self)
+            cell.model = model
+            return cell
+        }
     }
     
 }
@@ -42,8 +55,16 @@ extension LikeController: UITableViewDataSource {
 extension LikeController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let post = viewModel.list[indexPath.row]
+        let model = viewModel.list[indexPath.row]
         
-        return CGFloat(30 + 16 + ScreenWidth() * post.thumbnail_height / post.thumbnail_width)
+        switch model.type {
+        case .photo:
+            return CGFloat(30 + 100)
+        case .video:
+            return CGFloat(30 + 16 + ScreenWidth() * model.thumbnail_height.or(0) / model.thumbnail_width.or(1))
+        case .text:
+            return CGFloat(30 + 16 + ScreenWidth() * model.thumbnail_height.or(0) / model.thumbnail_width.or(1))
+        }
+        
     }
 }

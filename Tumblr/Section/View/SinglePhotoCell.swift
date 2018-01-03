@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import Reusable
 
-class SinglePhotoCell: UICollectionViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+class SinglePhotoCell: UICollectionViewCell, NibReusable {
+    
+    @IBOutlet weak var mainImageView: UIImageView!
+    
+    var model: Post.Photo! {
+        didSet {
+            mainImageView.setImage(URL(string: model.original_size.url))
+        }
     }
 
 }

@@ -20,8 +20,9 @@ class VideoCell: UITableViewCell, NibReusable {
         didSet {
             autherNickNameLabel.text = model.blog_name
             authorUserNameLabel.text = model.blog_name
-
-            videoImageView.setImage(URL(string: model.thumbnail_url))
+            videoImageView.setImage(URL(string: model.thumbnail_url.or("xx")))
+            avatorImageView.setImage(
+                URL(string: "https://api.tumblr.com/v2/blog/\(model.blog_name).tumblr.com/avatar/30"))
         }
     }
     

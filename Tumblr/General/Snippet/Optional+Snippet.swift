@@ -79,7 +79,7 @@ public extension Optional {
     /// - Sample:
     //  var a: String? = nil
     //  let res = a.or("b")
-    func `or`(value: Wrapped?) -> Optional {
+    func `or`(_ value: Wrapped) -> Wrapped {
         return self ?? value
     }
     

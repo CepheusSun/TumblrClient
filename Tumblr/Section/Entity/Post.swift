@@ -36,14 +36,13 @@ struct Post: Codable {
     // 图片
     var photos: [Photo]?
     var caption: String? // The user-supplied caption
-    
-    // 
+    var photoset_layout: String?   // 图片集的布局方式
 
     
-    
-    var thumbnail_height: Float  // 缩略图高
-    var thumbnail_width: Float   // 缩略图宽
-    var thumbnail_url: String    // 缩略图
+    // 视频
+    var thumbnail_height: Float?  // 缩略图高
+    var thumbnail_width: Float?   // 缩略图宽
+    var thumbnail_url: String?    // 缩略图
     
     
     enum `Type`: String, Codable {
@@ -69,7 +68,8 @@ struct Post: Codable {
     struct Photo: Codable {
         var caption: String  //  user supplied caption for the individual photo
         var alt_sizes: [Size]
-        
+        var original_size: Size
+
         struct Size: Codable {
             var width: Float
             var height: Float
