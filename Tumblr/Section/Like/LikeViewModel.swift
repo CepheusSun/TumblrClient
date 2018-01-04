@@ -17,8 +17,9 @@ final class LikeViewModel {
     var list: [Post] = []
     
     func load(_ callback: @escaping () -> Void){
-        HTTPClient.likesDataTask(withParameters: ["limit":20, "offset": 0]) {[weak self] (res, error) in
-            print(res!)
+        HTTPClient.likesDataTask(withParameters: ["limit":2, "offset": 0]) {[weak self] (res, error) in
+            print(res.or([:]))
+            print(error)
             let resObj = try? Mappable.mapResponseToArray(res!, to: Post.self, with: "liked_posts")
             self?.list = resObj!
             callback()

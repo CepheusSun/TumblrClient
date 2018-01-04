@@ -81,15 +81,22 @@ struct Post: Codable {
 
     func imageSizeFor(index: Int) -> CGSize {
         var res = CGSize.zero
-        photoset_layout.ifNone {
+        photoset_layout
+            .ifNone {
             
             let height = (photos?.first?.alt_sizes.first?.height).or(30)
             let width = (photos?.first?.alt_sizes.first?.width).or(30)
             let resHeight = ScreenWidth() * height / width
-            
             res = CGSize(
                 width: resHeight * height / width,
                 height: resHeight)
+        }
+            .ifSome {
+                
+                $0.forEach {
+                    let count = Int("\($0)")
+                    
+                }
         }
         
         return res

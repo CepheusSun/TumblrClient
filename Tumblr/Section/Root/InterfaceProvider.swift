@@ -11,35 +11,22 @@ import ESTabBarController_swift
 
 enum InterfaceProvider {
     // 主界面
-    static func mainTabbar() -> ESTabBarController {
+    static func mainTabbar() -> UITabBarController {
         
-        let tabbarController = ESTabBarController()
-        
-        if let tabBar = tabbarController.tabBar as? ESTabBar {
-            tabBar.itemCustomPositioning = .fillIncludeSeparator
-        }
+        let tabbarController = UITabBarController()
         
         let v1 = HomeController()
         let v2 = LikeController()
         let v3 = PersonController()
         
-        v1.tabBarItem = ESTabBarItem(
-            TabbarBasicContentView(),
-            title: nil,
-            image: UIImage(named: "home"),
-            selectedImage: UIImage(named: "home_1"))
+        v1.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "home"), selectedImage: #imageLiteral(resourceName: "home_1"))
+        v2.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "favor"), selectedImage: #imageLiteral(resourceName: "favor_1"))
+        v3.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "me"), selectedImage: #imageLiteral(resourceName: "me_1"))
+
+        tabbarController.tabBar.barTintColor = Const.Color.blue
+        tabbarController.tabBar.unselectedItemTintColor = UIColor(white: 165.0 / 255.0, alpha: 1.0)
+        tabbarController.tabBar.tintColor = Const.Color.blue
         
-        v2.tabBarItem = ESTabBarItem(
-            TabbarBasicContentView(),
-            title: nil,
-            image: UIImage(named: "favor"),
-            selectedImage: UIImage(named: "favor_1"))
-        
-        v3.tabBarItem = ESTabBarItem(
-            TabbarBasicContentView(),
-            title: nil,
-            image: UIImage(named: "me"),
-            selectedImage: UIImage(named: "me_1"))
         
         tabbarController.viewControllers = [
             NavigationController(rootViewController: v1),
@@ -72,24 +59,6 @@ class TabbarBasicContentView: ESTabBarItemContentView {
         highlightIconColor = UIColor.white
         backdropColor = Const.Color.blue
         highlightBackdropColor = backdropColor
-    }
-    
-    override func highlightAnimation(animated: Bool, completion: (() -> ())?) {
-        UIView.beginAnimations("small", context: nil)
-        UIView.setAnimationDuration(0.2)
-        let transform = imageView.transform.scaledBy(x: 0.8, y: 0.8)
-        imageView.transform = transform
-        UIView.commitAnimations()
-        completion?()
-    }
-    
-    override func dehighlightAnimation(animated: Bool, completion: (() -> ())?) {
-        UIView.beginAnimations("big", context: nil)
-        UIView.setAnimationDuration(0.2)
-        let transform = CGAffineTransform.identity
-        imageView.transform = transform.scaledBy(x: 1.15, y: 1.15)
-        UIView.commitAnimations()
-        completion?()
     }
     
     public required init?(coder aDecoder: NSCoder) {

@@ -37,8 +37,6 @@ class PhotoSetCell: UITableViewCell, NibReusable {
 //                self.layout = Array($0)
 //            }
             
-
-            
         }
     }
 }

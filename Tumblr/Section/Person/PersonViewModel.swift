@@ -16,7 +16,7 @@ final class PersonViewModel {
     
     func load() {
         HTTPClient.userInfoDataTask(callback: { (res, error) in
-            print(res!["user"])
+            print(res!["user"].or("no user"))
         }).resume()
     }
 }
