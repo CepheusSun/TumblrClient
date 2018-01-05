@@ -15,7 +15,7 @@ struct Post: Codable {
     var blog_name: String    // 博客名称
     var `id`: Int // 博客 id
     var post_url: String // 博客地址
-    var type: Type       // 博客种类
+    var type: PostType       // 博客种类
     var timestamp: Int   // 博客发表时间
     var date: String     // 博客发表时间
     var format: Format   // 博客发表的格式
@@ -45,12 +45,6 @@ struct Post: Codable {
     var thumbnail_width: Float?   // 缩略图宽
     var thumbnail_url: String?    // 缩略图
     
-    
-    enum `Type`: String, Codable {
-        case text = "text"
-        case video = "video"
-        case photo = "photo"
-    }
     
     enum Format: String, Codable {
         case html = "html"
@@ -118,7 +112,9 @@ struct Post: Codable {
             return CGFloat(30 + 16 + ScreenWidth() * thumbnail_height.or(0) / thumbnail_width.or(1))
         case .text:
             return CGFloat(30 + 16 + ScreenWidth() * thumbnail_height.or(0) / thumbnail_width.or(1))
-        } 
+        case .audio:
+            return CGFloat(30 + 16 + ScreenWidth() * thumbnail_height.or(0) / thumbnail_width.or(1))
+        }
     }
     
 }

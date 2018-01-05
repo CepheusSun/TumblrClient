@@ -25,6 +25,8 @@ class HomeController: WMPageController {
         dataSource          = self
         titles = [
             "视频", "图片", "文字"]
+        
+        selectIndex = 1
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,6 +43,15 @@ extension HomeController {
         return titles![index]
     }
     override func pageController(_ pageController: WMPageController, viewControllerAt index: Int) -> UIViewController {
-        return HomeViewController()
+        switch index {
+        case 0:
+            return HomeViewController(with: .video)
+        case 1:
+            return HomeViewController(with: .photo)
+        case 2:
+            return HomeViewController(with: .text)
+        default:
+            return HomeViewController(with: .photo)
+        }
     }
 }

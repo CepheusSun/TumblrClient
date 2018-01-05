@@ -13,15 +13,22 @@ import TMTumblrSDK.TMAPIClient
 
 final class HomeViewModel {
     
+
+    var type: PostType!
+    
+    init(with type: PostType) {
+        self.type = type
+    }
     var list: [Post] = []
     
     func load(_ callback: @escaping () -> Void){
-        HTTPClient.likesDataTask(withParameters: ["limit":2, "offset": 0]) {[weak self] (res, error) in
+        HTTPClient.dashboardRequest(["limit": 5, "offset": 0, "type": type.rawValue]) {
+            [weak self] (res, error) in
             print(res.or([:]))
             print(error)
-            let resObj = try? Mappable.mapResponseToArray(res!, to: Post.self, with: "liked_posts")
+            let resObj = try? Mappable.mapResponseToArray(res!, to: Post.self, with: "posts")
             self?.list = resObj!
             callback()
-            }.resume()
+        }.resume()
     }
 }

@@ -57,6 +57,10 @@ extension LikeController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(for: indexPath, cellType: VideoCell.self)
             cell.model = model
             return cell
+        case .audio:
+            let cell = tableView.dequeueReusableCell(for: indexPath, cellType: VideoCell.self)
+            cell.model = model
+            return cell
         }
     }
     
