@@ -16,7 +16,7 @@ pod 'MJRefresh'
 pod 'Reusable'
 pod 'TMTumblrSDK'
 pod 'ESTabBarController-swift'
-
+pod 'CollectionKit'
 end
 
 post_install do |installer_representation|
