@@ -17,8 +17,7 @@ enum Const {
     
     
     struct `Color` {
-        static let blue = UIColor.colorWithRGB(54, g: 70, b: 93)
-
+        static let black = UIColor.colorWithRGB(51, g: 51, b: 51)
     }
     
 }

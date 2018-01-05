@@ -15,7 +15,6 @@
 		33A2D99C1FFB2C5A008FC7EB /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D99A1FFB2C5A008FC7EB /* OAuthViewController.swift */; };
 		33A2D99D1FFB2C5A008FC7EB /* OAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A2D99B1FFB2C5A008FC7EB /* OAuthViewController.xib */; };
 		33A2D9A71FFB30AF008FC7EB /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D9A51FFB30AF008FC7EB /* HomeController.swift */; };
-		33A2D9A81FFB30AF008FC7EB /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A2D9A61FFB30AF008FC7EB /* HomeController.xib */; };
 		33A2D9AB1FFB30BB008FC7EB /* LikeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D9A91FFB30BB008FC7EB /* LikeController.swift */; };
 		33A2D9AC1FFB30BB008FC7EB /* LikeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A2D9AA1FFB30BB008FC7EB /* LikeController.xib */; };
 		33A2D9AF1FFB30C6008FC7EB /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D9AD1FFB30C6008FC7EB /* PersonController.swift */; };
@@ -53,6 +52,16 @@
 		33A2D9F41FFB9549008FC7EB /* UIColor+Snipper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D9DE1FFB9549008FC7EB /* UIColor+Snipper.swift */; };
 		33A2D9F51FFB9549008FC7EB /* Array+Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D9DF1FFB9549008FC7EB /* Array+Snippet.swift */; };
 		33A2D9F61FFB9549008FC7EB /* Number+Snippet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A2D9E01FFB9549008FC7EB /* Number+Snippet.swift */; };
+		33F8BDE41FFF5FF400BA5AA6 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 33F8BDD61FFF5FF400BA5AA6 /* LICENSE */; };
+		33F8BDE51FFF5FF400BA5AA6 /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8BDD81FFF5FF400BA5AA6 /* WMPageController.m */; };
+		33F8BDE61FFF5FF400BA5AA6 /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8BDDE1FFF5FF400BA5AA6 /* WMMenuItem.m */; };
+		33F8BDE71FFF5FF400BA5AA6 /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8BDDF1FFF5FF400BA5AA6 /* WMScrollView.m */; };
+		33F8BDE81FFF5FF400BA5AA6 /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8BDE01FFF5FF400BA5AA6 /* WMMenuView.m */; };
+		33F8BDE91FFF5FF400BA5AA6 /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F8BDE11FFF5FF400BA5AA6 /* WMProgressView.m */; };
+		33F8BDEA1FFF5FF400BA5AA6 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 33F8BDE31FFF5FF400BA5AA6 /* README.md */; };
+		33F8BDED1FFF60A700BA5AA6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F8BDEB1FFF60A700BA5AA6 /* HomeViewController.swift */; };
+		33F8BDEE1FFF60A700BA5AA6 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F8BDEC1FFF60A700BA5AA6 /* HomeViewController.xib */; };
+		33F8BDF01FFF60DA00BA5AA6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F8BDEF1FFF60DA00BA5AA6 /* HomeViewModel.swift */; };
 		33FAAB861FFCACF400854399 /* PhotoSetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAAB841FFCACF400854399 /* PhotoSetCell.swift */; };
 		33FAAB871FFCACF400854399 /* PhotoSetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33FAAB851FFCACF400854399 /* PhotoSetCell.xib */; };
 		33FAAB8A1FFCAFC000854399 /* SinglePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAAB881FFCAFC000854399 /* SinglePhotoCell.swift */; };
@@ -73,7 +82,6 @@
 		33A2D99A1FFB2C5A008FC7EB /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		33A2D99B1FFB2C5A008FC7EB /* OAuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OAuthViewController.xib; sourceTree = "<group>"; };
 		33A2D9A51FFB30AF008FC7EB /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		33A2D9A61FFB30AF008FC7EB /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
 		33A2D9A91FFB30BB008FC7EB /* LikeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeController.swift; sourceTree = "<group>"; };
 		33A2D9AA1FFB30BB008FC7EB /* LikeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikeController.xib; sourceTree = "<group>"; };
 		33A2D9AD1FFB30C6008FC7EB /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
@@ -111,6 +119,21 @@
 		33A2D9DE1FFB9549008FC7EB /* UIColor+Snipper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Snipper.swift"; sourceTree = "<group>"; };
 		33A2D9DF1FFB9549008FC7EB /* Array+Snippet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Snippet.swift"; sourceTree = "<group>"; };
 		33A2D9E01FFB9549008FC7EB /* Number+Snippet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Number+Snippet.swift"; sourceTree = "<group>"; };
+		33F8BDD61FFF5FF400BA5AA6 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		33F8BDD81FFF5FF400BA5AA6 /* WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageController.m; sourceTree = "<group>"; };
+		33F8BDDA1FFF5FF400BA5AA6 /* WMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScrollView.h; sourceTree = "<group>"; };
+		33F8BDDB1FFF5FF400BA5AA6 /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
+		33F8BDDC1FFF5FF400BA5AA6 /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
+		33F8BDDD1FFF5FF400BA5AA6 /* WMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMProgressView.h; sourceTree = "<group>"; };
+		33F8BDDE1FFF5FF400BA5AA6 /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
+		33F8BDDF1FFF5FF400BA5AA6 /* WMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMScrollView.m; sourceTree = "<group>"; };
+		33F8BDE01FFF5FF400BA5AA6 /* WMMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuView.m; sourceTree = "<group>"; };
+		33F8BDE11FFF5FF400BA5AA6 /* WMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMProgressView.m; sourceTree = "<group>"; };
+		33F8BDE21FFF5FF400BA5AA6 /* WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageController.h; sourceTree = "<group>"; };
+		33F8BDE31FFF5FF400BA5AA6 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		33F8BDEB1FFF60A700BA5AA6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		33F8BDEC1FFF60A700BA5AA6 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		33F8BDEF1FFF60DA00BA5AA6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		33FAAB841FFCACF400854399 /* PhotoSetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSetCell.swift; sourceTree = "<group>"; };
 		33FAAB851FFCACF400854399 /* PhotoSetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoSetCell.xib; sourceTree = "<group>"; };
 		33FAAB881FFCAFC000854399 /* SinglePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePhotoCell.swift; sourceTree = "<group>"; };
@@ -160,6 +183,7 @@
 		33A2D97A1FF7CEC7008FC7EB /* Tumblr */ = {
 			isa = PBXGroup;
 			children = (
+				33F8BDD41FFF5FF400BA5AA6 /* Vendor */,
 				33A2D9981FFB2C34008FC7EB /* Section */,
 				33A2D9941FF7DB17008FC7EB /* General */,
 				33A2D97B1FF7CEC7008FC7EB /* AppDelegate.swift */,
@@ -227,7 +251,9 @@
 			isa = PBXGroup;
 			children = (
 				33A2D9A51FFB30AF008FC7EB /* HomeController.swift */,
-				33A2D9A61FFB30AF008FC7EB /* HomeController.xib */,
+				33F8BDEB1FFF60A700BA5AA6 /* HomeViewController.swift */,
+				33F8BDEC1FFF60A700BA5AA6 /* HomeViewController.xib */,
+				33F8BDEF1FFF60DA00BA5AA6 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -312,6 +338,49 @@
 			path = Snippet;
 			sourceTree = "<group>";
 		};
+		33F8BDD41FFF5FF400BA5AA6 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				33F8BDD51FFF5FF400BA5AA6 /* WMPageController */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		33F8BDD51FFF5FF400BA5AA6 /* WMPageController */ = {
+			isa = PBXGroup;
+			children = (
+				33F8BDD61FFF5FF400BA5AA6 /* LICENSE */,
+				33F8BDD71FFF5FF400BA5AA6 /* WMPageController */,
+				33F8BDE31FFF5FF400BA5AA6 /* README.md */,
+			);
+			path = WMPageController;
+			sourceTree = "<group>";
+		};
+		33F8BDD71FFF5FF400BA5AA6 /* WMPageController */ = {
+			isa = PBXGroup;
+			children = (
+				33F8BDD81FFF5FF400BA5AA6 /* WMPageController.m */,
+				33F8BDD91FFF5FF400BA5AA6 /* WMMenuView */,
+				33F8BDE21FFF5FF400BA5AA6 /* WMPageController.h */,
+			);
+			path = WMPageController;
+			sourceTree = "<group>";
+		};
+		33F8BDD91FFF5FF400BA5AA6 /* WMMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				33F8BDDA1FFF5FF400BA5AA6 /* WMScrollView.h */,
+				33F8BDDB1FFF5FF400BA5AA6 /* WMMenuItem.h */,
+				33F8BDDC1FFF5FF400BA5AA6 /* WMMenuView.h */,
+				33F8BDDD1FFF5FF400BA5AA6 /* WMProgressView.h */,
+				33F8BDDE1FFF5FF400BA5AA6 /* WMMenuItem.m */,
+				33F8BDDF1FFF5FF400BA5AA6 /* WMScrollView.m */,
+				33F8BDE01FFF5FF400BA5AA6 /* WMMenuView.m */,
+				33F8BDE11FFF5FF400BA5AA6 /* WMProgressView.m */,
+			);
+			path = WMMenuView;
+			sourceTree = "<group>";
+		};
 		5292CC33294DA437963DCDAB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -384,15 +453,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33A2D9A81FFB30AF008FC7EB /* HomeController.xib in Resources */,
 				33A2D9861FF7CEC7008FC7EB /* LaunchScreen.storyboard in Resources */,
 				33A2D9BD1FFB8263008FC7EB /* VideoCell.xib in Resources */,
 				33A2D99D1FFB2C5A008FC7EB /* OAuthViewController.xib in Resources */,
+				33F8BDE41FFF5FF400BA5AA6 /* LICENSE in Resources */,
 				33A2D9831FF7CEC7008FC7EB /* Assets.xcassets in Resources */,
 				33A2D9B01FFB30C6008FC7EB /* PersonController.xib in Resources */,
 				33A2D9AC1FFB30BB008FC7EB /* LikeController.xib in Resources */,
 				33FAAB871FFCACF400854399 /* PhotoSetCell.xib in Resources */,
+				33F8BDEA1FFF5FF400BA5AA6 /* README.md in Resources */,
 				33FAAB8B1FFCAFC000854399 /* SinglePhotoCell.xib in Resources */,
+				33F8BDEE1FFF60A700BA5AA6 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,21 +547,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				33A2D9E11FFB9549008FC7EB /* UIView+Snippet.swift in Sources */,
+				33F8BDE81FFF5FF400BA5AA6 /* WMMenuView.m in Sources */,
 				33A2D9F21FFB9549008FC7EB /* UIAlertController+Snippet.swift in Sources */,
 				33A2D9E51FFB9549008FC7EB /* StatusBar+Snippet.swift in Sources */,
 				33A2D9E31FFB9549008FC7EB /* UITextField+Snippet.swift in Sources */,
 				33A2D9EA1FFB9549008FC7EB /* Encrypt.swift in Sources */,
+				33F8BDE61FFF5FF400BA5AA6 /* WMMenuItem.m in Sources */,
 				33A2D9B81FFB7465008FC7EB /* NavigationController.swift in Sources */,
 				33A2D9C01FFB8472008FC7EB /* UIImageView+KingFisher.swift in Sources */,
 				33A2D9AB1FFB30BB008FC7EB /* LikeController.swift in Sources */,
 				33A2D9EC1FFB9549008FC7EB /* Extension+Snippet.swift in Sources */,
 				33A2D9E61FFB9549008FC7EB /* Collection+Snippet.swift in Sources */,
 				33A2D9C91FFB9513008FC7EB /* Device.swift in Sources */,
+				33F8BDE91FFF5FF400BA5AA6 /* WMProgressView.m in Sources */,
 				33A2D9C51FFB8E80008FC7EB /* Mappable.swift in Sources */,
 				33A2D99C1FFB2C5A008FC7EB /* OAuthViewController.swift in Sources */,
 				33A2D9C71FFB94CB008FC7EB /* Layout.swift in Sources */,
 				33A2D9EF1FFB9549008FC7EB /* URL+Snippet.swift in Sources */,
 				33A2D9971FF7DB54008FC7EB /* HTTPEngine.swift in Sources */,
+				33F8BDF01FFF60DA00BA5AA6 /* HomeViewModel.swift in Sources */,
+				33F8BDED1FFF60A700BA5AA6 /* HomeViewController.swift in Sources */,
+				33F8BDE51FFF5FF400BA5AA6 /* WMPageController.m in Sources */,
 				33A2D9F11FFB9549008FC7EB /* Delay+Snippet.swift in Sources */,
 				33A2D9E21FFB9549008FC7EB /* Generic+Snippet.swift in Sources */,
 				33A2D9E71FFB9549008FC7EB /* Operator.swift in Sources */,
@@ -508,6 +585,7 @@
 				33A2D9F51FFB9549008FC7EB /* Array+Snippet.swift in Sources */,
 				33A2D9F41FFB9549008FC7EB /* UIColor+Snipper.swift in Sources */,
 				33A2D9F31FFB9549008FC7EB /* Optional+Snippet.swift in Sources */,
+				33F8BDE71FFF5FF400BA5AA6 /* WMScrollView.m in Sources */,
 				33A2D9B21FFB50F9008FC7EB /* InterfaceProvider.swift in Sources */,
 				33A2D9F61FFB9549008FC7EB /* Number+Snippet.swift in Sources */,
 				33FAAB8A1FFCAFC000854399 /* SinglePhotoCell.swift in Sources */,

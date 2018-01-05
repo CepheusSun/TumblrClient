@@ -8,28 +8,39 @@
 
 import UIKit
 
-class HomeController: UIViewController {
+class HomeController: WMPageController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        navigationItem.title = "首页"
+    init() {
+        super.init(nibName: nil, bundle: nil)
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        pageAnimatable      = false
+        menuViewStyle       = .line
+        titleColorNormal = Const.Color.black
+        titleColorSelected = UIColor.black
+        progressViewIsNaughty = true
+        titleSizeNormal = 18
+        titleSizeSelected = 18
+        titleSizeSelected   = self.titleSizeNormal
+        showOnNavigationBar = true
+        dataSource          = self
+        titles = [
+            "视频", "图片", "文字"]
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-    */
 
+}
+
+extension HomeController {
+    override func numbersOfChildControllers(in pageController: WMPageController) -> Int {
+        return titles!.count
+    }
+    override func pageController(_ pageController: WMPageController, titleAt index: Int) -> String {
+        return titles![index]
+    }
+    override func pageController(_ pageController: WMPageController, viewControllerAt index: Int) -> UIViewController {
+        return HomeViewController()
+    }
 }

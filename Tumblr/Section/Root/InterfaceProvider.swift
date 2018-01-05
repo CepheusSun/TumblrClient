@@ -23,9 +23,8 @@ enum InterfaceProvider {
         v2.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "favor"), selectedImage: #imageLiteral(resourceName: "favor_1"))
         v3.tabBarItem = UITabBarItem(title: nil, image: #imageLiteral(resourceName: "me"), selectedImage: #imageLiteral(resourceName: "me_1"))
 
-        tabbarController.tabBar.barTintColor = Const.Color.blue
         tabbarController.tabBar.unselectedItemTintColor = UIColor(white: 165.0 / 255.0, alpha: 1.0)
-        tabbarController.tabBar.tintColor = Const.Color.blue
+        tabbarController.tabBar.tintColor = Const.Color.black
         
         
         tabbarController.viewControllers = [
@@ -54,11 +53,9 @@ class TabbarBasicContentView: ESTabBarItemContentView {
         super.init(frame: frame)
         let transform = CGAffineTransform.identity
         imageView.transform = transform.scaledBy(x: 1.15, y: 1.15)
-        
         iconColor = UIColor(white: 165.0 / 255.0, alpha: 1.0)
+        
         highlightIconColor = UIColor.white
-        backdropColor = Const.Color.blue
-        highlightBackdropColor = backdropColor
     }
     
     public required init?(coder aDecoder: NSCoder) {
