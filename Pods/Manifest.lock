@@ -1,0 +1,47 @@
+PODS:
+  - Alamofire (4.5.1)
+  - CollectionKit (1.0.2)
+  - ESTabBarController-swift (2.5)
+  - Kingfisher (4.3.1)
+  - MJRefresh (3.1.15.1)
+  - Reusable (4.0.0):
+    - Reusable/Storyboard (= 4.0.0)
+    - Reusable/View (= 4.0.0)
+  - Reusable/Storyboard (4.0.0)
+  - Reusable/View (4.0.0)
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
+  - SnapKit (4.0.0)
+  - SwiftyJSON (4.0.0)
+  - TMTumblrSDK (5.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - CollectionKit
+  - ESTabBarController-swift
+  - Kingfisher
+  - MJRefresh
+  - Reusable
+  - RxCocoa
+  - RxSwift
+  - SnapKit
+  - SwiftyJSON
+  - TMTumblrSDK
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  CollectionKit: 320938e22727539c7f289a53233e4387ffcecf73
+  ESTabBarController-swift: 8daa432f2a9be8ebd25101dc46c84472fd760512
+  Kingfisher: 75541c4b62f02e1fde6f9772303de3d9ebe8f5b3
+  MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
+  Reusable: 98e5fff1e0e2e00872199699b276dde08ee56c07
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  TMTumblrSDK: 75aca84910dd905a1ca63f5f5826fbeaf28a0c1e
+
+PODFILE CHECKSUM: 3647ba8769c1b05ebd237a5103135fff4efe5a7f
+
+COCOAPODS: 1.4.0.beta.2
