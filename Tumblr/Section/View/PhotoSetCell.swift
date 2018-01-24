@@ -41,7 +41,6 @@ class PhotoSetCell: UITableViewCell, NibReusable {
     }
 }
 
-
 extension PhotoSetCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return model.photos!.count

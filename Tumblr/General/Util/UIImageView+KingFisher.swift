@@ -50,7 +50,7 @@ public extension UIImageView {
         self.kf.setImage(with: url,
                          placeholder: placeholderImage,
                          options: options,
-                         progressBlock: nil) {[weak self] (image, error, cacheType, imageURL) in
+                         progressBlock: nil) {[weak self] (_, _, _, _) in
                             self?.contentMode = .scaleToFill
         }
     }

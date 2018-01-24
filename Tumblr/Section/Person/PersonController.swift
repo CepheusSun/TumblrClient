@@ -11,7 +11,6 @@ import UIKit
 class PersonController: UIViewController {
 
     let viewModel = PersonViewModel()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "个人"

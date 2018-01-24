@@ -12,7 +12,6 @@ class HomeController: WMPageController {
 
     init() {
         super.init(nibName: nil, bundle: nil)
-        
         pageAnimatable      = false
         menuViewStyle       = .line
         titleColorNormal = Const.Color.black
@@ -25,10 +24,8 @@ class HomeController: WMPageController {
         dataSource          = self
         titles = [
             "视频", "图片", "文字"]
-        
         selectIndex = 1
     }
-    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

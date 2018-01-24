@@ -13,9 +13,7 @@ import RxSwift
 class OAuthViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
-    
     var bag = DisposeBag()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,8 +22,6 @@ class OAuthViewController: UIViewController {
             .subscribe(onNext: { _ in
                 HTTP.authenticate()
             }).disposed(by: bag)
-        
     }
-
 
 }

@@ -15,6 +15,4 @@ class NavigationController: UINavigationController {
         navigationBar.tintColor = Const.Color.black
     }
 
-
-
 }

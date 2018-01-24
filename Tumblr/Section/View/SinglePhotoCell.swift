@@ -10,9 +10,7 @@ import UIKit
 import Reusable
 
 class SinglePhotoCell: UICollectionViewCell, NibReusable {
-    
     @IBOutlet weak var mainImageView: UIImageView!
-    
     var model: Post.Photo! {
         didSet {
             mainImageView.setImage(URL(string: model.alt_sizes[2].url))

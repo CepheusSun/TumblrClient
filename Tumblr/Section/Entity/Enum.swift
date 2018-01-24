@@ -1,4 +1,3 @@
-
 //
 //  Enum.swift
 //  Tumblr
@@ -11,12 +10,9 @@ import Foundation
 
 enum PostType: String, Codable {
 
-    case photo = "photo"
-    case text = "text"
-    case video = "video"
-    case audio = "audio"
+    case photo
+    case text
+    case video
+    case audio
     
-    //         , quote, link, chat, , , answer
-
 }
-

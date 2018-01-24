@@ -1,4 +1,3 @@
-
 //
 //  PersonViewModel.swift
 //  Tumblr
@@ -13,9 +12,8 @@ import RxCocoa
 import TMTumblrSDK.TMAPIClient
 
 final class PersonViewModel {
-    
     func load() {
-        HTTPClient.userInfoDataTask(callback: { (res, error) in
+        HTTPClient.userInfoDataTask(callback: { (res, _) in
             print(res!["user"].or("no user"))
         }).resume()
     }
