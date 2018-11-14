@@ -18,7 +18,7 @@ final class HomeViewModel {
     }
     var list: [Post] = []
     func load(_ callback: @escaping () -> Void) {
-        HTTPClient.dashboardRequest(["limit": 5,
+        HTTPClient.dashboardRequest(["limit": 10,
                                      "offset": 0,
                                      "type": type.rawValue]) { [weak self] (res, _) in
             print(res.or([:]))

@@ -10,7 +10,7 @@ import UIKit
 
 typealias AlertActionHandler = ((UIAlertAction) -> Void)
 
-extension UIAlertControllerStyle {
+extension UIAlertController.Style {
     
     func controller(title: String?,
                     message: String?,
@@ -30,7 +30,7 @@ extension UIAlertControllerStyle {
 extension String {
     
     func alertAction(
-        style: UIAlertActionStyle = .default,
+        style: UIAlertAction.Style = .default,
         handler: AlertActionHandler? = nil
         ) -> UIAlertAction {
         return UIAlertAction(

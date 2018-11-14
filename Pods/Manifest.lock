@@ -1,18 +1,20 @@
 PODS:
-  - Alamofire (4.5.1)
-  - ESTabBarController-swift (2.5)
-  - Kingfisher (4.3.1)
-  - MJRefresh (3.1.15.1)
-  - Reusable (4.0.0):
-    - Reusable/Storyboard (= 4.0.0)
-    - Reusable/View (= 4.0.0)
-  - Reusable/Storyboard (4.0.0)
-  - Reusable/View (4.0.0)
-  - RxCocoa (4.0.0):
+  - Alamofire (4.7.3)
+  - ESTabBarController-swift (2.6.4)
+  - Kingfisher (4.10.1)
+  - MJRefresh (3.1.15.7)
+  - Reusable (4.0.4):
+    - Reusable/Storyboard (= 4.0.4)
+    - Reusable/View (= 4.0.4)
+  - Reusable/Storyboard (4.0.4)
+  - Reusable/View (4.0.4)
+  - RxAtomic (4.4.0)
+  - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
-  - RxSwift (4.0.0)
-  - SnapKit (4.0.0)
-  - SwiftyJSON (4.0.0)
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
+  - SnapKit (4.2.0)
+  - SwiftyJSON (4.2.0)
   - TMTumblrSDK (5.0)
 
 DEPENDENCIES:
@@ -27,18 +29,33 @@ DEPENDENCIES:
   - SwiftyJSON
   - TMTumblrSDK
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - ESTabBarController-swift
+    - Kingfisher
+    - MJRefresh
+    - Reusable
+    - RxAtomic
+    - RxCocoa
+    - RxSwift
+    - SnapKit
+    - SwiftyJSON
+    - TMTumblrSDK
+
 SPEC CHECKSUMS:
-  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
-  ESTabBarController-swift: 8daa432f2a9be8ebd25101dc46c84472fd760512
-  Kingfisher: 75541c4b62f02e1fde6f9772303de3d9ebe8f5b3
-  MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
-  Reusable: 98e5fff1e0e2e00872199699b276dde08ee56c07
-  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
-  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  ESTabBarController-swift: 58cca4ab7de980657d99a02181c1ff310983e975
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  Reusable: 7fc772097df3e5fc86f59d8a7af9708e49b5ff55
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   TMTumblrSDK: 75aca84910dd905a1ca63f5f5826fbeaf28a0c1e
 
 PODFILE CHECKSUM: 82f23c9e8eb705d5530d146aacdb32d7fa5f29a9
 
-COCOAPODS: 1.4.0.beta.2
+COCOAPODS: 1.6.0.beta.1
